@@ -1,4 +1,5 @@
-lst = [1, 100, 200, 22, 1001, 32]
+lst = [1, 100, 200, 22, 1001, 32]   # list
+tup = (1, 100, 200, 22, 1001, 32)   # tuples are immutable
 lst[1] = 99999
 print(lst[1])
 print(lst)
