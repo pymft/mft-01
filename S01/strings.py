@@ -4,5 +4,9 @@ print(text)
 print(word)
 
 character = text[5]
-text[5] = 'O'
+# text[5] = 'O'
 print(character)
+
+
+word = "hello"
+print(word[::-1])
