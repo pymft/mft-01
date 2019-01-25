@@ -9,3 +9,9 @@ val_1 = person_list[0]
 print(val_1)
 val_2 = person_dict['first name']
 print(val_2)
+
+person_dict['first name'] = 'Emma'
+person_dict['last name'] = "Watson"
+person_dict['place of born'] = "UK"
+
+print(person_dict)
