@@ -1,3 +1,4 @@
+# list methods
 
 * `append` 
 * `clear` 
@@ -21,3 +22,5 @@
 >>> val 
 ... None
 ```
+
+
