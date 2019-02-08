@@ -1,18 +1,19 @@
 # conditional statement
 num1 = int(input('enter num1 : '))
 num2 = int(input('enter num2 : '))
-text = input("say something : ")
+action = input("say something : ")
+
 val = num1 + num2
 cond = num1 > num2
 
-if text == 'zarb':
-    print(text)
-    print(num1*num2)
+if action == 'add':
+    print(num1 + num2)
 
-if text.isupper():
-    print("line1")
-    print("line2")
+if action == 'sub':
+    print(num1 - num2)
 
+if action == 'mul':
+    print(num1 * num2)
 
-print("line3")
-
+if action == 'div':
+    print(num1 / num2)
