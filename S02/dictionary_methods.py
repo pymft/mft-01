@@ -6,7 +6,8 @@ song = {"singer": "Edith Piaf",
 
 # song["title"] = "La Vie En Rose"
 
-song.update({"language": "FR", "title": "La Vie En Rose"})
+dct_new = {"language": "FR", "title": "La Vie En Rose"}
+song.update(dct_new)
 # import collections
 
 list_of_keys = list(song.keys())

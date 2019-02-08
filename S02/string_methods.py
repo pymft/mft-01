@@ -10,3 +10,4 @@ text.startswith('wh')  # True
 text.startswith('sdfsd')  # False
 text.istitle()
 text.isidentifier()
+text.isupper()
