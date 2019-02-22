@@ -14,9 +14,11 @@ lines = []
 for i in range(1, m+1):
     line = []
     for j in range(1, n+1):
-        line.append(str(i * j))
+        line.append(i * j)
 
-    line_str = '\t'.join(line)
+    # list comprehension
+    line_map = map(str, line)
+    line_str = '\t'.join(line_map)
     lines.append(line_str)
 
 text = '\n'.join(lines)
