@@ -10,9 +10,21 @@ n = int(n_str)
 f1.close()
 
 f = open('./output.txt', 'w')
-for i in range(m, n+1):
-    line = "*" * (i)
-    line = line + '\n'
-    f.write(line)
+lines = []
+for i in range(1, m+1):
+    line = []
+    for j in range(1, n+1):
+        line.append(str(i * j))
+
+    line_str = '\t'.join(line)
+    lines.append(line_str)
+
+text = '\n'.join(lines)
+f.write(text)
+
+
+
+
+
 
 f.close()
