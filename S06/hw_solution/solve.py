@@ -17,12 +17,14 @@ tags = []
 
 starts = data[:-1]
 stops = data[1:]
+diff = [e-i for i, e in zip(starts, stops)]
 
-for i, e in zip(starts, stops):
-    t = e-i
-    tag = describe(t, 300, 400)
-    diff.append(t)
-    tags.append(tag)
+tags = map(describe, diff)
+# for i, e in zip(starts, stops):
+#     t = e-i
+#     tag = describe(t, 300, 400)
+#     diff.append(t)
+#     tags.append(tag)
 
 
 tags_str = ''.join(tags)
