@@ -5,19 +5,27 @@ class Rectangle:
         self.height = height
         # self.area = width * height
 
-    def get_area(self):
+    @property
+    def area(self):
         return self.width * self.height
 
-    def get_perimeter(self):
+    @property
+    def perimeter(self):
         return (self.width + self.height) * 2
 
 
 r1 = Rectangle(10, 5)
-r1.height =7
-# print(r1.area)
-print(r1.get_area())
-print(r1.get_perimeter())
+r1.height = 7
+print(r1.area, r1.perimeter)
+r1.width = 2
+print(r1.area, r1.perimeter)
+r1.height = 1
+print(r1.area, r1.perimeter)
 
-
-print(Rectangle.__dict__)
-print(r1.__dict__)
+#
+# # print(r1.get_area())
+# # print(r1.get_perimeter())
+#
+#
+# print(Rectangle.__dict__)
+# print(r1.__dict__)
