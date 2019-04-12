@@ -10,7 +10,6 @@
 #
 # my_decorator = app.route('/login')
 #
-#
 # @my_decorator
 # def login():
 #     return "<h1>login page</h1>"
