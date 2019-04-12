@@ -11,3 +11,4 @@ pat = "\w+@\w+\.\w+"
 result = re.findall(pat, text)
 
 print(result)
+
