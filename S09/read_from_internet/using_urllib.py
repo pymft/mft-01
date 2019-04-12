@@ -10,8 +10,9 @@ with urllib.request.urlopen(url) as f:
 
 mystr = mybytes.decode("utf8")
 
+pat = "href=['\"]?([^'\" >]+)"
 
-with open("output.html", 'w') as fw:
-    fw.write(mystr)
+res = re.findall(pat, mystr)
+print(res)
 
 

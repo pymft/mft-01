@@ -8,5 +8,7 @@ with open('mujir.txt') as f:
 pat = "Glory be to You O (.+?)![\., ]+Exalted are You O (.+?)!"
 result = re.findall(pat, text)
 
-print(result)
+
+for a, b in result:
+    print(f"{a:>50}|{b}")
 
