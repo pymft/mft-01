@@ -1,3 +1,4 @@
+import re
 from time import time
 import urllib.request
 
@@ -11,40 +12,34 @@ class Browser:
         return super().__new__(cls)
 
     def __init__(self, url):
-        self.url = url
+        self.__url = url
         self.__data = None
-        Browser._instances.update({self.url: self})
+        Browser._instances.update({self.__url: self})
+
+    @staticmethod
+    def __get_links(data):
+        pat = "href=['\"]?(https?[^'\" >]+)"
+
+        res = re.findall(pat, data)
+        return res
 
     @property
     def data(self):
         if not self.__data:
-            with urllib.request.urlopen(self.url) as req:
+            with urllib.request.urlopen(self.__url) as req:
                 self.__data = req.read().decode('utf8')
-
         return self.__data
 
+    @property
     def links(self):
-        pass
+        links_str = self.__get_links(self.data)
+        return  [Browser(lnk) for lnk in links_str]
+        # return map(Browser, links_str)
+
+    def __repr__(self):
+        return self.__url
 
 
 b = Browser("https://python.org")
 c = Browser("https://python.org")
 
-
-b.links[5].data
-
-# print(id(b))
-# print(id(c))
-#
-# times = []
-# times.append(time())
-# text = b.data
-# times.append(time())
-# print(times[-1] - times[-2])
-# print(len(text))
-#
-# times.append(time())
-# text = c.data
-# times.append(time())
-# print(times[-1] - times[-2])
-# print(len(text))

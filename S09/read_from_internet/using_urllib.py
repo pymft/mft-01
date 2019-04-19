@@ -10,7 +10,7 @@ with urllib.request.urlopen(url) as f:
 
 mystr = mybytes.decode("utf8")
 
-pat = "href=['\"]?([^'\" >]+)"
+pat = "href=['\"]?(https?[^'\" >]+)"
 
 res = re.findall(pat, mystr)
 print(res)
