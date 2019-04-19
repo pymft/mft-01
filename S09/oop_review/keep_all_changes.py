@@ -11,6 +11,7 @@ class RememberStuff:
     def number_of_instances(self):
         return len(self.instances)
 
+
 w1 = RememberStuff("Hello")
 print(RememberStuff.instances)
 
