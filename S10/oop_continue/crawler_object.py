@@ -41,5 +41,6 @@ class Browser:
 
 
 b = Browser("https://python.org")
+
 c = Browser("https://python.org")
 
